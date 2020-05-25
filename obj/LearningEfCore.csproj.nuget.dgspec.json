@@ -38,7 +38,7 @@
           "dependencies": {
             "microsoft.entityframeworkcore.sqlserver": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[3.1.4, )"
             }
           },
           "imports": [

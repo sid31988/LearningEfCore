@@ -4926,7 +4926,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "microsoft.entityframeworkcore.sqlserver >= *"
+      "microsoft.entityframeworkcore.sqlserver >= 3.1.4"
     ]
   },
   "packageFolders": {
@@ -4966,7 +4966,7 @@
         "dependencies": {
           "microsoft.entityframeworkcore.sqlserver": {
             "target": "Package",
-            "version": "[*, )"
+            "version": "[3.1.4, )"
           }
         },
         "imports": [
