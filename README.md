@@ -26,8 +26,7 @@ We are reading from a table named Product and ProductType, where ProductType is 
 - However, Non tracking queries can not be used in cases of inclusion, because for non tracking queries identity resolution is also disabled.
 - Inclusion allows fetching an entity we also include the dependent entities, by means of DbExtensions.Include(this IQueryable query) extension method.
 - Identity resolution is a mechanism where the id fields are traced, and if a reference to the same id is made, the earlier instance is fetched using change tracking, which does not works in case of non-tracking queries, since change tracking is disabled, hence for them every time a new instance is created even for duplicate references to the same id value.
-- Let us understand change tracking with an example:
-  Suppose while fetching data for Products, we also include the data from ProductType. Now assume, for product type "mobile", there are two products "Samsung" and "Nokia", below lines of code demonstrate the change of behavior with tracking enabled and disabled:
+- Let us understand change tracking with an example. Suppose while fetching data for Products, we also include the data from ProductType. Now assume, for product type "mobile", there are two products "Samsung" and "Nokia", below lines of code demonstrate the change of behavior with tracking enabled and disabled:
   1. Tracking enabled
     ```
     var products = context.Product.Include(ProductType).ToList();
