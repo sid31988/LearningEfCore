@@ -1,5 +1,6 @@
 # A Readonly Situation
 
+
 ## A. Introduction
 This is a pretty simple scenario wherein, we only require to perform simple readonly or select queries from the database. For instance, dealing with master data or configuration data stored in database are a good example.
 
