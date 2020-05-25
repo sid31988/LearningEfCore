@@ -6,11 +6,7 @@ This is a pretty simple scenario wherein, we only require to perform simple read
 ## B. The scenario
 We are reading from a table named Product and ProductType, where ProductType is a master table, consisting of "Mobile", "Tablet" and "Laptop" as predefined product types. We will create a dotnet core console application, which will fetch us the list of products along with their respective product types.
   ### 1. The entities:
-  Below is the entity diagram for the above described scenario:
-  x-special/nautilus-clipboard
-copy
-file:///home/siddharth/Downloads/A-Readonly-Scenario-ERD.png
-
+  ![Entity Diagram](https://github.com/sid31988/LearningEfCore/blob/scenario/001-Readonly-Situation/A-Readonly-Scenario-ERD.png)
 
 # A. About Tracing
 
