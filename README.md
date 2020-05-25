@@ -8,4 +8,4 @@ I would really to thank Jon Smith for popping this idea in my mind, so here in t
 
 # About the course
 The course will cover the below enlisted topics, each of the topics listed has a corresponding branch.
-## 1. A readonly situation : 
+ ### 1. A readonly situation : [scenario/001-Readonly-Situation](https://github.com/sid31988/LearningEfCore/tree/scenario/001-Readonly-Situation)
