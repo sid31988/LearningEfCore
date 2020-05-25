@@ -9,18 +9,18 @@ We are reading from a table named Product and ProductType, where ProductType is 
   ![Entity Diagram](https://github.com/sid31988/LearningEfCore/blob/scenario/001-Readonly-Situation/A-Readonly-Scenario-ERD.png)
   ### 2. Solutions:
   There are two approaches for such a kind of scenario,
-  a. complete readonly
-      Here we can directly set the query tracking behavior for all the queries.
-      ```
-      context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
-      var productTypes = context.ProductTypes.ToList();
-      ```
-  b. partial readonly
-      Here we can optionally set the query tracking behavior for a desired query.
-      ```
-      var poductTypes = context.ProductTypes.AsNoTacking().ToList();
-      ```
-
+  
+  #### 1. Complete readonly:
+  Here we can directly set the query tracking behavior for all the queries.
+  ```
+  context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
+  var productTypes = context.ProductTypes.ToList();
+  ```
+  #### 2. Partial readonly:
+  Here we can optionally set the query tracking behavior for a desired query.
+  ```
+  var poductTypes = context.ProductTypes.AsNoTacking().ToList();
+  ```
 # A. About Tracing
 
 The method below serves the purpose:
