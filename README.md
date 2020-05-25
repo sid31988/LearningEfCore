@@ -4,18 +4,18 @@ This is a pretty simple scenario wherein, we only require to perform simple read
 
 ### B. The scenario
 We are reading from a table named Product and ProductType, where ProductType is a master table, consisting of "Mobile", "Tablet" and "Laptop" as predefined product types. We will create a dotnet core console application, which will fetch us the list of products along with their respective product types.
-  > ### 1. The entities:
-  >> ![Entity Diagram](https://github.com/sid31988/LearningEfCore/blob/scenario/001-Readonly-Situation/A-Readonly-Scenario-ERD.png)
-  > ### 2. Solutions:
-  >> There are two approaches for such a kind of scenario,  
-  >> #### 2.1. Context instance readonly:
-  >>> Here we can directly set the query tracking behavior for all the queries, at context instance level.
+  ### 1. The entities:
+  ![Entity Diagram](https://github.com/sid31988/LearningEfCore/blob/scenario/001-Readonly-Situation/A-Readonly-Scenario-ERD.png)
+  ### 2. Solutions:
+  There are two approaches for such a kind of scenario,  
+  #### 2.1. Context instance readonly:
+  Here we can directly set the query tracking behavior for all the queries, at context instance level.
   ```
     context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
     var productTypes = context.ProductTypes.ToList();
   ```
-  >> #### 2.2. Query readonly:
-  >>> Here we can optionally set the query tracking behavior for a desired query.
+  #### 2.2. Query readonly:
+  Here we can optionally set the query tracking behavior for a desired query.
   ```
     var poductTypes = context.ProductTypes.AsNoTacking().ToList();
   ```
