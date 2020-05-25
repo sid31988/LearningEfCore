@@ -39,6 +39,7 @@ namespace LearningEfCore
                 DisplayProductType(mobilePhones[0].ProductType, "mobilePhones[0].ProductType");
                 Console.WriteLine();
                 DisplayProductType(mobilePhones[1].ProductType, "mobilePhones[1].ProductType");
+                Console.WriteLine();
                 if (mobilePhones[0].ProductType == mobilePhones[1].ProductType)
                     Console.WriteLine("\"Id Resolution\" found i.e. both the product type instances are same, since tracking is enabled");
             }
